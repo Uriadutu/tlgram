@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>tlgrm</title>
+
+</head>
+<body>
+    <form action="">
+        <div class="form">
+        <div class="isi">
+            <h1>pesan</h1>
+
+        <input class="nama" type="text" id="nama" placeholder="Nama" autocomplete="off"><br>
+        <!-- <input class="nama" type="text" id="email" placeholder="Email"><br> -->
+        <input class="nama" type="text" id="pesan" placeholder="Pesan" autocomplete="off"><br>
+        <input class="kirim" type="submit" value="kirim" onclick="kirimPesan()">
+    </div>
+    </div>
+    </form>
+    
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha512-+NqPlbbtM1QqiK8ZAo4Yrj2c4lNQoGv8P79DPtKzj++l5jnN39rHA/xsqn8zE9l0uSoxaCdrOgFs6yjyfbBxSg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+    function kirimPesan(){
+    const nama = document.getElementById('nama');
+    // const email = document.getElementById('email');
+    const pesan = document.getElementById('pesan');
+    const format = "Nama%3A"+ " " + nama.value + "%0APesan%3A"+ " " + pesan.value;
+
+    const token = "7065568975:AAEZrkJlRperOjJyp_CYVclsSC1mBjqYcL0";
+    const grub = "-4190243723";
+
+    $.ajax({
+      url: `https://api.telegram.org/bot${token}/sendMessage?chat_id=${grub}&text=${format}&parse_mode=html`,
+      method: "POST",
+    });
+}</script>
+</html>

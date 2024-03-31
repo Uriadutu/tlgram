@@ -1,0 +1,44 @@
+*{
+    background: #262a35;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.isi input{
+    font-size: 13px;
+}
+.isi .nama{
+    display: inline-block;
+    width: 97%;
+}
+.form h1 {
+    color: white;
+}
+.nama {
+    border: 1px solid #999;
+    margin-bottom: 6px;
+    height: 30px;
+    padding: 4px ;
+    font-size : 20px;
+    color: white;
+    display: inline-block;
+    border-radius: 5px;
+
+    
+}
+.isi {
+    width: 400px;
+}
+.kirim {
+    background: blue;
+    color: white;
+    border: 0;
+    padding: 6px 24px;
+    width: 50%;
+    border-radius: 2px;
+}
